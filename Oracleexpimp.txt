@@ -1,4 +1,4 @@
-create user 用户名 identified by 密码;
+﻿create user 用户名 identified by 密码;
 授权：
 grant connect,resource,dba to 用户名;
 
@@ -20,3 +20,6 @@ imp zhaojiaxiang/zjx@192.168.80.106:1521/ammiceng file=C:\my_user.dmp full=y
 exp zhaojiaxiang/zjx@192.168.80.106:1521/ammiceng file=C:\zjx.dmp owner=(zhaojiaxiang,zjx,...)
 imp zjx/zjx@localhost:1521/ammiceng file=C:\zjx.dmp full=y
 
+
+
+test test
