@@ -1,0 +1,22 @@
+create user 用户名 identified by 密码;
+授权：
+grant connect,resource,dba to 用户名;
+
+select * from all_tables where owner='ZHAOJIAXIANG';  //查看数据库中属于该用户的表
+
+sqlplus scott/tiger@localhost:1521/ammiceng as sysdba  //使用管理员登陆sqlplus  要加上 as sysdba
+
+sqlplus zjx/zjx@localhost:1521/ammiceng     //使用非管理员登陆sqlplus  不用加上 as sysdba
+
+导入/导出数据库
+exp zjx/zjx@localhost:1521/ammiceng full=y inctype=complete file=C:\db.dmp
+imp zjx/zjx@localhost:1521/ammiceng full=y file=C:\db.dmp
+
+导入/导出数据库中的表
+exp zjx/zjx@localhost:1521/ammiceng file=C:\my_user.dmp tables=(table1,table2,table3,table4,...)
+imp zhaojiaxiang/zjx@192.168.80.106:1521/ammiceng file=C:\my_user.dmp full=y
+
+导入/导出数据库中某个用户的表
+exp zhaojiaxiang/zjx@192.168.80.106:1521/ammiceng file=C:\zjx.dmp owner=(zhaojiaxiang,zjx,...)
+imp zjx/zjx@localhost:1521/ammiceng file=C:\zjx.dmp full=y
+
