@@ -19,7 +19,3 @@ imp zhaojiaxiang/zjx@192.168.80.106:1521/ammiceng file=C:\my_user.dmp full=y
 导入/导出数据库中某个用户的表
 exp zhaojiaxiang/zjx@192.168.80.106:1521/ammiceng file=C:\zjx.dmp owner=(zhaojiaxiang,zjx,...)
 imp zjx/zjx@localhost:1521/ammiceng file=C:\zjx.dmp full=y
-
-
-
-test test
